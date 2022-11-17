@@ -1,0 +1,35 @@
+[{
+  "name": "Evan",
+  "intro":"I am a front-end web developer.Download my CV to check me out.",
+  "about": "I am a creative designer and developer, who aims to work with a company and deliver the best of me. I offer development services of web applications or websites",
+  "profile":"images/profile.png",
+  "href":"/resume.pdf",
+  "download": true,
+  "education":[
+    {"course": "Bachelors of Science in Computer Engineering",
+    "schoolName":"STI College of Surigao",
+    "schoolYear": "2018-2022"
+    }],
+  "skills":[
+      {"skillName":"html",
+      "icons": "FaHtml5",
+      "color":"#E34C26",
+      "value":60
+    },
+    {"skillName":"css",
+    "icons": "FaCss3Alt",
+    "color":"#2965f1",
+    "value":45
+    },
+    {"skillName":"javascript",
+    "icons": "FaJsSquare",
+    "color":"#f0db4f",
+    "value":35
+    },
+    {"skillName":"react",
+    "icons": "FaReact",
+    "color":"#61DBFB",
+    "value":50
+    }
+  ]
+}]
