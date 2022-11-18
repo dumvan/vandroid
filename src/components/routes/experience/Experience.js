@@ -7,11 +7,11 @@ import {motion} from 'framer-motion'
 export default function Experience(){
   const container = {
     hidden: { opacity: 0 },
-    show: {
+    visible: {
       opacity: 1,
       transition: {
         delayChildren: 0,
-        staggerChildren: 0.3
+        staggerChildren: 0.5
       }
     }
   }
@@ -20,7 +20,7 @@ export default function Experience(){
   const animateVariants = {
     hidden:{
       opacity:1,
-      x:100
+      x:20
     },
     visible:{
       opacity:1,
@@ -40,8 +40,8 @@ export default function Experience(){
         className="flex flex-col items-center mx-auto justify-center w-full min-h-screen bg-gradient-to-b from-secondary to-tertiary text-white"> 
         <motion.div
           variants={container}
-          initial="hide"
-          animate="show"
+          initial="hidden"
+          animate="visible"
           className="mt-20 p-4 max-w-screen-lg mx-auto flex flex-col justify-center h-full w-full">
           {/*============Studied==============================*/}
           <motion.div 

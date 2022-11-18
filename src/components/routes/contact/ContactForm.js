@@ -1,12 +1,12 @@
 import {React,useRef ,useState} from 'react'
-import {set, useForm } from 'react-hook-form'
+import {useForm } from 'react-hook-form'
 import Modal from '../../Modal'
 import emailjs from '@emailjs/browser'
 
 export default function ContactForm(){
   const [showModal, setShowModal] = useState(false)
  
-  const { register, handleSubmit, reset ,watch, formState: { errors } } = useForm()
+  const { register, handleSubmit, reset , formState: { errors } } = useForm()
   
   const form = useRef();
 
@@ -31,11 +31,14 @@ export default function ContactForm(){
           onSubmit={handleSubmit(onSubmit)}
           className='mt-5 gap-4 text-black flex flex-col'
           >
-            <input className='pl-2 rounded-sm focus:outline-none' type='text' placeholder='Enter yourName' {...register("fullname")}/>
+            <input className='pl-2 rounded-sm focus:outline-none' type='text' placeholder='Enter your Name' {...register("fullname")}/>
+            <p className='delay-500 bg-red-600 text-sm'>{errors.weight?.fullname}</p>
             <input className='pl-2 rounded-sm focus:outline-none' type='email' placeholder='Enter your Email' {...register("email")}/>
+            <p className='delay-500 bg-red-600 text-sm'>{errors.weight?.email}</p>
             <textarea className='pl-2 pt-2 rounded-sm focus:outline-none' rows={10} placeholder='Enter your Message'{...register('emailMessage')}/>
+            <p className='delay-500 bg-red-600 text-sm'>{errors.weight?.emailMessage}</p>
             <input className=' text-white drop-shadow-lg rounded-lg bg-tertiary p-2 mx-auto' type='submit'/>
-          </form>
+          </form> 
           {showModal ? <Modal onClick={()=>setShowModal(!showModal)}/> : null}   
         </section>
       
